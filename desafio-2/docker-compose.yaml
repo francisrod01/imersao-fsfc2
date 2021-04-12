@@ -1,0 +1,14 @@
+version: "3"
+
+services:
+  srv-back:
+    build: backend-app
+    ports:
+      - "3000:3000"
+
+  srv-front:
+    build: frontend-app
+    ports:
+      - "3001:3000"
+    depends_on:
+      - srv-back
