@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: frontend-app
+  name: frontend-app-route
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: frontend-app
+      app: frontend-app-route
   template:
     metadata:
       labels:
-        app: frontend-app
+        app: frontend-app-route
     spec:
       containers:
-        - name: frontend-app
-          image: francisrod01/frontend-app
+        - name: frontend-app-route
+          image: francisrod01/desafio-2_srv-front:latest
           ports:
             - containerPort: 80

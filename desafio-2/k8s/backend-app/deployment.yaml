@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: backend-app
+  name: backend-app-route
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: backend-app
+      app: backend-app-route
   template:
     metadata:
       labels:
-        app: backend-app
+        app: backend-app-route
     spec:
       containers:
-        - name: backend-app
-          image: francisrod01/backend-app
+        - name: backend-app-route
+          image: francisrod01/desafio-2_srv-back:latest
           ports:
             - containerPort: 3000
